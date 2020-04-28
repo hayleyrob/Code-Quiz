@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <div id="myQuiz"></div>
+  <button id="submit">Submit</button>
+  <div id="qResults"></div>
+  
+  <script>
+const quizDiv = document.getElementById('myQuiz')
+const resultDiv = document.getElementById('qResults')
+const submitBtn = document.getElementById('submit')
+
+
+function displayQuiz(){}
+function displayResults(){}
+
+//show quiz
+displayQuiz()
+
+//submit answer (currently shows result - change)
+submitBtn.addEventListener('click', displayResults)
+
+const myQuestions = [
+  {
+    question: "What does CSS stand for?",
+    answers: {
+      a. "Current Style Source",
+      b. "Cascading Style Sheet",
+      c. "Cascading Style Source",
+      d. "Color Style Sheet"
+
+  },
+    correctAnswer: "b"
+  },
+  {
+    question: "What does HTML stand for?",
+    answers: {
+      a. "Hypertext Markup Language",
+      b. "How To Make Languages",
+      c. "Hosting Takeover Make Language",
+      d. "Hundred Text Markup Language"
+    },
+      correctAnswer: "a"
+  },
+  question: "What does Javascript do?",
+  answers: {
+    a. "Provides interactive functionality",
+    b. "Styles website",
+    c. "Creates structure of webpage",
+    d. "None of the above"
+  },
+    correctAnswer: "a"
+  }
+];
+
+
+
+
+
+  </script>
+</body>
+</html>
