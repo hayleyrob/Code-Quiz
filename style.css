@@ -1,0 +1,131 @@
+ {
+    box-sizing: border-box;
+    color: white;
+    font-family: Lato;
+    text-align: center;
+}
+
+body{
+    background: blue;
+    margin: 10px;
+}
+
+#container
+{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-auto-rows: repeat(8,1fr);
+    /* max-width: auto; */
+    gap:10px;
+    grid-template-areas: 
+    "header header header"
+    ". nav ."
+    "aside1 main aside2"
+    "aside1 section aside2"
+    "aside1 section aside2"
+    "aside1 rules aside2"
+    "aside1 rules aside2"
+    "footer footer footer";
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 760px)
+{
+    #container
+    {
+     background-color: #fff;
+    display:grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "aside1 aside2 aside2"
+    "aside1 aside2 aside2"
+    "main main main"
+    "section section section"
+    "rules rules rules"
+    "footer footer footer";
+    margin-top: 60px;
+    margin-bottom: 60px;
+    }
+}
+#container >*
+{
+    /* background: rgba(44, 8, 143, 0.849); */
+    padding:30px;
+}
+
+header{
+    grid-area: header;
+    position: fixed;
+    background-color: pink;
+    top: 0;
+    width:100%;
+    margin:-10px;
+    height: 10px;
+    display: block;
+}
+
+main{
+    grid-area: main;
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+.answers {
+    grid-area: section;
+    background-color: white;
+}
+
+.answers li{
+    list-style-type: none;
+}
+
+.btn{
+    
+    margin: 5px;
+    width: 100%;
+     text-align: left;
+}
+
+.rules{
+    grid-area: rules;
+    background-color: white;
+    text-align: left;
+}
+
+.rules p
+{
+    text-align: left;
+}
+
+.aside1{
+    grid-area: aside1;
+    background-color: white; 
+    color: black 
+}
+
+.aside2{
+    grid-area: aside2;
+    background-color: white;
+    text-align: left;
+    color: black
+}
+
+.aside2 >*
+{
+    text-align: left;
+    background-color: white;
+    color: black
+}
+
+#myFooter
+{
+   width: 100%;
+   background-color:pink;
+   color: white;
+   text-align: center;
+    
+}
